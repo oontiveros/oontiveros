@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Welcome to The Stay Inn, a cozy bed and breakfast offering comfortable rooms, relaxing amenities, and a peaceful getaway.">
+      
+    <title>The Stay Inn</title>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Website header and hero section -->
+    <header class="hero">
+
+        <img src="images/stay_inn_logo.png"
+             alt="The Stay Inn Logo"
+             class="logo">
+
+        <div class="hero-text">
+            <h1>The Stay Inn</h1>
+
+            <p class="tagline">
+                Stay. Relax. Explore.
+            </p>
+
+            <p>
+                A cozy place to rest, recharge, and enjoy your getaway.
+            </p>
+
+            <a href="rooms/garden_suite.html" class="button">
+                View Our Rooms
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- Main navigation menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="rooms/garden_suite.html">Garden Suite</a></li>
+            <li><a href="rooms/sunset_room.html">Sunset Room</a></li>
+            <li><a href="events/Special_Events.html">Weekend Events</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Main home page content -->
+    <main>
+
+        <!-- Welcome section -->
+        <h2>Welcome to The Stay Inn</h2>
+
+        <p>
+            A cozy bed and breakfast designed to feel like home.
+        </p>
+
+        <p>
+            At The Stay Inn, we offer comfortable rooms, peaceful surroundings,
+            and a warm atmosphere where guests can relax and enjoy their stay.
+            Whether you're visiting for a weekend getaway or just need a quiet
+            place to rest, we want every guest to feel welcome.
+        </p>
+
+
+        <!-- About section -->
+        <h2>Your Home Away From Home</h2>
+
+        <p>
+            Our bed and breakfast combines comfort, charm, and friendly
+            hospitality. Guests can enjoy thoughtfully decorated rooms,
+            relaxing common spaces, and a fresh breakfast each morning.
+            The Stay Inn is the perfect place to slow down, unwind, and
+            make lasting memories.
+        </p>
+
+
+        <!-- Amenities offered to guests -->
+        <h2>What We Offer</h2>
+
+        <ul>
+            <li>Comfortable private guest rooms</li>
+            <li>Complimentary breakfast each morning</li>
+            <li>Free Wi-Fi</li>
+            <li>Cozy common areas</li>
+            <li>Fresh coffee and tea</li>
+            <li>Convenient parking</li>
+            <li>Peaceful outdoor seating</li>
+        </ul>
+
+
+        <!-- Call-to-action section -->
+        <h2>Come Stay With Us</h2>
+
+        <p>
+            Escape the busy everyday routine and enjoy a relaxing stay at
+            The Stay Inn. We look forward to welcoming you and making your
+            visit comfortable and memorable.
+        </p>
+
+
+<!-- Hotel image slideshow -->
+<div class="slideshow-container">
+
+    <div class="slide fade">
+        <img src="images/Entrance.png"
+             alt="Exterior view of The Stay Inn">
+    </div>
+
+    <div class="slide fade">
+        <img src="images/Lobby.png"
+             alt="Porch entrance at The Stay Inn">
+    </div>
+
+    <div class="slide fade">
+        <img src="images/Lounge.png"
+             alt="Lobby reception at The Stay Inn">
+    </div>
+
+</div>
+    </main>
+
+
+    <!-- Footer with copyright and webmaster contact -->
+    <footer>
+        Copyright &copy; 2026<br>
+        <a href="mailto:oontiveros_email@amarillocollege.com">
+            Omar Ontiveros
+        </a>
+    </footer>
+
+</div>
+
+<script>
+    let slideIndex = 0;
+
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+
+        setTimeout(showSlides, 4000);
+    }
+</script>
+
+</body>
+</html>

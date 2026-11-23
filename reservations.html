@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Book a relaxing stay at The Stay Inn.">
+    <title>Reservations | The Stay Inn</title>
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Website Header -->
+    <header class="hero">
+
+        <img src="images/stay_inn_logo.png"
+             alt="The Stay Inn Logo"
+             class="logo">
+
+        <div class="hero-text">
+            <h1>The Stay Inn</h1>
+            <p class="tagline">Stay. Relax. Explore.</p>
+            <p>Your cozy home away from home.</p>
+        </div>
+
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms/garden_suite.html">Garden Suite</a></li>
+            <li><a href="rooms/sunset_room.html">Sunset Room</a></li>
+            <li><a href="events/Special_Events.html">Weekend Events</a></li>
+            <li><a href="reservations.html" class="active"
+                   aria-current="page">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <h2>Make a Reservation</h2>
+
+        <p>
+            Ready for a relaxing getaway?
+            Fill out the form below to request
+            your stay at The Stay Inn.
+        </p>
+
+        <!-- Room Pricing Table -->
+        <h2>Our Room Rates</h2>
+
+        <div class="table-wrap">
+            <table class="rates-table">
+                <caption>Starting nightly room rates</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Room</th>
+                        <th scope="col">Price Per Night</th>
+                        <th scope="col">Max Guests</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Garden Suite</td>
+                        <td>$145</td>
+                        <td>2</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sunset Room</td>
+                        <td>$135</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Reservation Form -->
+        <h2>Reservation Form</h2>
+
+        <p>
+            This is a class demonstration.
+            Please use sample information only.
+        </p>
+
+        <form class="reservation-form"
+              action="reservation_received.html"
+              method="get">
+
+            <fieldset>
+                <legend>Guest Information</legend>
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text"
+                               id="fullname"
+                               name="fullname"
+                               required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email Address:</label>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel"
+                               id="phone"
+                               name="phone">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="guests">Number of Guests:</label>
+                        <input type="number"
+                               id="guests"
+                               name="guests"
+                               min="1"
+                               max="2"
+                               required>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Reservation Details</legend>
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+                        <label for="checkin">Check-in Date:</label>
+                        <input type="date"
+                               id="checkin"
+                               name="checkin"
+                               required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="checkout">Check-out Date:</label>
+                        <input type="date"
+                               id="checkout"
+                               name="checkout"
+                               required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="room">Select Your Room:</label>
+
+                        <select id="room" name="room" required>
+                            <option value="">Choose a Room</option>
+                            <option value="garden">
+                                Garden Suite - $145
+                            </option>
+                            <option value="sunset">
+                                Sunset Room - $135
+                            </option>
+                        </select>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Services</legend>
+
+                <p>Select any additional services:</p>
+
+                <div class="choice-row">
+                    <label>
+                        <input type="checkbox"
+                               name="pillows"
+                               value="yes">
+                        Extra Pillows
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="latecheckout"
+                               value="yes">
+                        Late Checkout Request
+                    </label>
+                </div>
+
+                <p>Preferred Contact Method:</p>
+
+                <div class="choice-row">
+                    <label>
+                        <input type="radio"
+                               name="contact_method"
+                               value="email"
+                               checked>
+                        Email
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="contact_method"
+                               value="phone">
+                        Phone
+                    </label>
+                </div>
+
+                <div class="form-field">
+                    <label for="requests">
+                        Special Requests:
+                    </label>
+
+                    <textarea id="requests"
+                              name="requests"
+                              rows="4"
+                              cols="40"></textarea>
+                </div>
+
+            </fieldset>
+
+            <!-- Submit and Reset Buttons -->
+            <div class="form-actions">
+                <button type="submit" class="button">
+                    Submit Reservation Request
+                </button>
+
+                <button type="reset" class="button-reset">
+                    Clear Form
+                </button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        Copyright &copy; 2026 The Stay Inn
+
+        <p>
+            <a href="mailto:oontiveros_email@amarillocollege.com">
+                Omar Ontiveros
+            </a>
+        </p>
+    </footer>
+
+</div>
+
+</body>
+</html>
